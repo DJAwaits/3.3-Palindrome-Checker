@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 Palindrome Checker
+  form(method="POST" action="/")
+    label(for="userText") Enter your text here:
+    br
+    input(type="text" id="userText" name="userText" value=`${phrase}`)
+    br
+    br
+    button(type="submit") Submit
+  if message
+    p=message
+    br
+    br
+    br
+    h1 Palindrome Examples
+    p A palindrome is a word that is spelled the same way whether you start from the first letter or go backwards from the last letter.
+    br
+    h2 Are a Palindrome:
+    p racecar
+    p radar
+    p noon
+    br
+    h2 Not a Palindrome:
+    p sir
+    p morning
+    p breakfast
